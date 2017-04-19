@@ -14,12 +14,20 @@ ip=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
 ```
 
 Allow connections running xhost command
+
 ```
 xhost + $ip
 ```
+
 Now, you can run it!
 
 ```
-docker run --rm -it -p 8083:8083 -e DISPLAY=$ip:0 -v /tmp/.X11-unix:/tmp/.X11-unix gpalli/nextreport-designer
+docker run --rm -it -p 8083:8083 -e DISPLAY=$ip:0 -v /tmp/.X11-unix:/tmp/.X11-unix gpalli/nextreports-designer
 ```
+Map local files to image volume files to save settings
+
+```
+-v $(pwd)/server-prod.ds-next:/root/server-prod.ds-next
+```
+
 Greetings!!!.
