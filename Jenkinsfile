@@ -10,7 +10,7 @@ pipeline {
     tag = "$GIT_BRANCH"
     imagenamebase = "cimichaelm/nextreports-designer"
     imagename = "${imagenamebase}:${tag}"
-    registry = "cimichaelm/nextreports-designer'
+    registry = "cimichaelm/nextreports-designer"
     registryCredential = ''
     dockerImage = ''
     dockerregistry=''
