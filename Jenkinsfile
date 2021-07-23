@@ -3,7 +3,7 @@
 // define variables
 //
 // downstream jobs
-def downstreamjobs = [ 'docker-emailbot', 'docker-abppyurs' ]
+def downstreamjobs = [ ]
 
 pipeline {
   environment {
