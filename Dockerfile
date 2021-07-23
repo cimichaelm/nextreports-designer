@@ -1,15 +1,13 @@
-FROM openjdk:oraclelinux8
+FROM openjdk
 
 LABEL maintainer "guillermo.palli@gmail.com"
 LABEL description "This file installs NextReports Desginer 9.2 into docker image."
 
-# install packages
-RUN yum update && yum install -y wget unzip
+#RUN wget http://www.asf.ro/next_reports_releases/nextreports-designer-9.2.zip
 
-RUN wget http://www.asf.ro/next_reports_releases/nextreports-designer-9.2.zip
+#RUN unzip nextreports-designer-9.2.zip
 
-RUN unzip nextreports-designer-9.2.zip
-
+COPY nextreports-designer-9.2 /
 WORKDIR nextreports-designer-9.2
 
 CMD ["java", "-Xms128m", "-Xmx1024m", "-cp", "lib/*:jdbc-drivers/*:.","ro.nextreports.designer.Main"]

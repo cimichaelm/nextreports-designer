@@ -23,6 +23,11 @@ pipeline {
 //        git ''
 //      }
 //    }
+    stage('Fetch files') {
+      steps {
+        sh './scripts/fetch-data.sh'
+      }
+    }
     stage('Building image') {
       steps{
         script {
