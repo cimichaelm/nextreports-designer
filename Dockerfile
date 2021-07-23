@@ -1,4 +1,4 @@
-FROM openjdk
+FROM openjdk:oraclelinux8
 
 LABEL maintainer "guillermo.palli@gmail.com"
 LABEL description "This file installs NextReports Desginer 9.2 into docker image."
