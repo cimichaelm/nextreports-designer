@@ -1,4 +1,4 @@
-# DOCKER NEXTREPORTS DESIGN 9.1
+# DOCKER NEXTREPORTS DESIGN 9.2
 
 Use this docker image to run the application without installing anything in your computer!
 
