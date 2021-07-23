@@ -3,7 +3,7 @@
 #
 defaults()
 {
-    var="9.2"
+    ver="9.2"
     filename="nextreports-designer-${ver}.zip"
     url="http://www.asf.ro/next_reports_releases/${filename}"
 }
